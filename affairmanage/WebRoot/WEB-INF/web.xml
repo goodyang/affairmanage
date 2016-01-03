@@ -15,8 +15,17 @@
   	<servlet-class>com.saga.affairmanage.servlet.StatusRecognise</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>GetMessageList</servlet-name>
+  	<servlet-class>com.saga.affairmanage.servlet.GetMessageList</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>StatusRecognise</servlet-name>
   	<url-pattern>/StatusRecogniseAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetMessageList</servlet-name>
+  	<url-pattern>/GetMessageList</url-pattern>
   </servlet-mapping>
 </web-app>

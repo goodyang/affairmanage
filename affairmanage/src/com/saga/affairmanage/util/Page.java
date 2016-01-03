@@ -4,18 +4,18 @@ public class Page {
 	private int everyPage;
 	private int totalCount;
 	private int totalPage;
-	private int currentpage;
+	private int currentPage;
 	private int beginIndex;
 	private boolean hasPrePage;
 	private boolean hasNextPage;
 
-	public Page(int everyPage, int totalCount, int totalPage, int currentpage,
+	public Page(int everyPage, int totalCount, int totalPage, int currentPage,
 			int beginIndex, boolean hasPrePage, boolean hasNextPage) {
 		super();
 		this.everyPage = everyPage;
 		this.totalCount = totalCount;
 		this.totalPage = totalPage;
-		this.currentpage = currentpage;
+		this.currentPage = currentPage;
 		this.beginIndex = beginIndex;
 		this.hasPrePage = hasPrePage;
 		this.hasNextPage = hasNextPage;
@@ -45,12 +45,12 @@ public class Page {
 		this.totalPage = totalPage;
 	}
 
-	public int getCurrentpage() {
-		return currentpage;
+	public int getCurrentPage() {
+		return currentPage;
 	}
 
-	public void setCurrentpage(int currentpage) {
-		this.currentpage = currentpage;
+	public void setCurrentPage(int currentPage) {
+		this.currentPage = currentPage;
 	}
 
 	public int getBeginIndex() {
