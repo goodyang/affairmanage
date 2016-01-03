@@ -1,5 +1,6 @@
 package com.saga.affairmanage.bean;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Message {
@@ -7,7 +8,7 @@ public class Message {
 	private String messageTitle;	
 	private String messageContent;	
 	private int employeeID;			
-	private Date publishTime;		
+	private Timestamp publishTime;		
 	public int getMessageID() {
 		return messageID;
 	}
@@ -35,7 +36,7 @@ public class Message {
 	public Date getPublishTime() {
 		return publishTime;
 	}
-	public void setPublishTime(Date publishTime) {
+	public void setPublishTime(Timestamp publishTime) {
 		this.publishTime = publishTime;
 	}
 	
