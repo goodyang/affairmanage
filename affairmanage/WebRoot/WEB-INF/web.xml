@@ -20,6 +20,16 @@
   	<servlet-class>com.saga.affairmanage.servlet.GetMessageList</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>GetMessage</servlet-name>
+  	<servlet-class>com.saga.affairmanage.servlet.GetMessage</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>CommitReply</servlet-name>
+  	<servlet-class>com.saga.affairmanage.servlet.CommitReply</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>StatusRecognise</servlet-name>
   	<url-pattern>/StatusRecogniseAction</url-pattern>
@@ -27,5 +37,13 @@
   <servlet-mapping>
   	<servlet-name>GetMessageList</servlet-name>
   	<url-pattern>/GetMessageList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetMessage</servlet-name>
+  	<url-pattern>/GetMessage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CommitReply</servlet-name>
+  	<url-pattern>/CommitReply</url-pattern>
   </servlet-mapping>
 </web-app>
