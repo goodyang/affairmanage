@@ -10,10 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.saga.affairmanage.bean.Criticism;
 import com.saga.affairmanage.bean.Message;
 import com.saga.affairmanage.bean.Reply;
+import com.saga.affairmanage.dao.CriticismDAO;
 import com.saga.affairmanage.dao.MessageDAO;
 import com.saga.affairmanage.dao.ReplyDAO;
+import com.saga.affairmanage.factory.CriticismDAOFactory;
 import com.saga.affairmanage.factory.MessageDAOFactory;
 import com.saga.affairmanage.factory.ReplyDAOFactory;
 import com.saga.affairmanage.util.Page;
@@ -43,6 +46,11 @@ public class GetMessage extends HttpServlet{
 		
 		req.setAttribute("replyList", replies);
 		req.setAttribute("page", page);
+		
+		CriticismDAO criticismDAO = CriticismDAOFactory.getCriticismDAOInstance();
+		Criticism criticism = criticismDAO.findCriticismByMsgID(messageID);
+		
+		req.setAttribute("criticism", criticism);
 		
 		ServletContext servletContext = getServletContext();
 		RequestDispatcher dispatcher = servletContext.getRequestDispatcher("/showMsg.jsp");

@@ -30,6 +30,11 @@
   	<servlet-class>com.saga.affairmanage.servlet.CommitReply</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>CommitCriticism</servlet-name>
+  	<servlet-class>com.saga.affairmanage.servlet.CommitCriticism</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>StatusRecognise</servlet-name>
   	<url-pattern>/StatusRecogniseAction</url-pattern>
@@ -45,5 +50,9 @@
   <servlet-mapping>
   	<servlet-name>CommitReply</servlet-name>
   	<url-pattern>/CommitReply</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CommitCriticism</servlet-name>
+  	<url-pattern>/CommitCriticism</url-pattern>
   </servlet-mapping>
 </web-app>
