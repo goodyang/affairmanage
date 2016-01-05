@@ -37,4 +37,10 @@ public class GetMessageList extends HttpServlet {
 		RequestDispatcher dispatcher = servletContext.getRequestDispatcher("/msgList.jsp");
 		dispatcher.forward(req, resp);
 	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doGet(req, resp);
+	}
 }

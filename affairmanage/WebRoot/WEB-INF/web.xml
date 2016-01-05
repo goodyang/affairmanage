@@ -35,6 +35,11 @@
   	<servlet-class>com.saga.affairmanage.servlet.CommitCriticism</servlet-class>
   </servlet>
   
+  <servlet>
+  	<servlet-name>MsgPublic</servlet-name>
+  	<servlet-class>com.saga.affairmanage.servlet.MsgPublish</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>StatusRecognise</servlet-name>
   	<url-pattern>/StatusRecogniseAction</url-pattern>
@@ -54,5 +59,9 @@
   <servlet-mapping>
   	<servlet-name>CommitCriticism</servlet-name>
   	<url-pattern>/CommitCriticism</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MsgPublic</servlet-name>
+  	<url-pattern>/MsgPublic</url-pattern>
   </servlet-mapping>
 </web-app>

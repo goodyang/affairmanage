@@ -18,7 +18,7 @@ public class MessageDAOImpl implements MessageDAO{
 	@Override
 	public void addMessage(Message message) {
 		Connection conn = DBConnection.getConnection();
-		String addSQL = "insert into tb_message(messageTitle, messageContent, employeeID, publishTime)"+
+		String addSQL = "insert into message(messageTitle, messageContent, employeeID, publishTime)"+
 				" values(?,?,?,?)";
 		PreparedStatement pstmt = null;
 		try {

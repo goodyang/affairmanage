@@ -2,37 +2,8 @@
 <%@ taglib uri="http://ckeditor.com" prefix="CK" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
-    <title>企业日常事务管理系统-查看具体消息</title>
-	<link type="text/css" href="css.css" rel="stylesheet" media="all" />
-	<link type="text/css" href="css/channel.css" rel="stylesheet" media="all" />
-	<script type="text/javascript" src="menu.js"></script>
-	<style type="text/css">
-		.STYLE2 {
-			color:#CCCCCC;
-			font-size:14px;
-		}
-	</style>
-  </head>
-  
-  <body>
-    <div id="topexplain">企业日常事务管理系统，为企业内部通信提供最简便的服务！</div>
-	<div id="topmenu"><img src="images/banner.jpg" width="970" height="147" /></div>
-	<div id="bookmunu">
-	<div class="jsmenu" id="jsmenu">
-	<ul>
-	  <li class="normal"><a urn="#jsmenu1" rel="conmenu" href="index.jsp">首页</a></li>
-	  <li class="active"><a urn="#default_Info" rel="conmenu" href="GetMessageList">消息列表</a></li>
-	  <li class="normal"><a urn="jsmenu2" rel="conmenu" href="publishNewMsg.jsp">发布新消息</a></li>
-	  <li class="normal"><a urn="jsmenu3" rel="conmenu" href="statusRecognise.jsp">身份识别</a></li>
-	  </ul>
-	</div>
-	</div>
+<%@ include file="header.jsp" %>
 	
-	<div id="conmenu"></div>
 	<div id="place">当前位置：[<a href="index.jsp">首页</a>] - [消息列表] - [查看具体消息]</div>
 	<div id="channelcont">
 	<div id="channelleft">
@@ -92,29 +63,4 @@
 	</div>
 	</div>
 	
-	<div class="copyright">
-		<ul>
-		<li></li>
-		<li>企业日常事务管理系统 &nbsp;&copy;2015-2016</li>
-		</ul>
-	</div>
-	
-	<div class="end"></div>
-	<script type="text/javascript">
-	startajaxtabs("jsmenu");
-
-	var iTab=GetCookie("nets_jsmenu");
-	iTab = iTab ? parseInt(iTab):parseInt(Math.random()*5);
-	if(iTab!=0) getElement("jsmenu").getElementsByTagName("h1")[iTab].LoadTab();
-	iTab++;
-	if(iTab>4) iTab=0;
-	SetCookie("nets_jsmenu",iTab,365);
-	
-	function getElement(aID)
-	{
-	  return (document.getElementById) ? document.getElementById(aID)
-	                                   : document.all[aID];
-	}
-	</script>
-  </body>
-</html>
+<%@ include file="footer.jsp" %>
